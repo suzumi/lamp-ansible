@@ -1,0 +1,8 @@
+- name: install memcached
+  yum: name={{item}} state=latest enablerepo=remi,remi-php55
+  with_items:
+    - memcached
+    - php-pecl-memcache
+
+- name: be sure memcached is running and enabled
+  service: name=memcached state=started enabled=yes

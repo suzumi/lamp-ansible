@@ -1,0 +1,20 @@
+- name: install php5.5 & modules
+  yum: name={{item}} state=latest enablerepo=remi-php55
+  with_items:
+    - php
+    - php-pear
+    - php-mbstring
+    - php-devel
+    - php-mcrypt
+    - php-mysql
+    - php-curl
+    - php-memcache
+
+- name: copy php.ini
+  copy: src=../templates/php.ini dest=/etc/php.ini backup=yes
+
+- name: install pear mail
+  shell: pear install -a {{item}}
+  with_items:
+    - Mail
+    - Mail_MIME

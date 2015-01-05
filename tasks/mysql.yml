@@ -1,0 +1,14 @@
+- name: install mysql
+  yum:  name={{ item }} state=latest
+  with_items:
+    - mysql
+    - mysql-server
+    - mysql-devel
+    - mysql-utilities
+
+- name: be sure mysql is running and enabled
+  service: name=mysqld state=started enabled=yes
+# - name: create database.
+#   mysql_db: db={{ db_name }} state=present encoding=utf8
+# - name: Create database user
+#   mysql_user: name={{ db_user }} password={{ db_password }} priv={{ db_name }}.*:ALL state=present

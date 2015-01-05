@@ -1,0 +1,8 @@
+- name: install apache
+  yum: name=httpd state=latest
+
+- name: replace /etc/httpd/conf/httpd.conf
+  replace: dest=/etc/httpd/conf/httpd.conf regexp='/var/www/html' replace='/vagrant_data/public' backup=yes
+
+- name: be sure apache is running and enabled
+  service: name=httpd state=started enabled=yes

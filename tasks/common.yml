@@ -1,0 +1,21 @@
+- name: update repository
+  yum: name=* state=latest
+
+- name: install essentials
+  yum: name={{ item }} state=latest
+  with_items:
+    - unzip
+    - vim
+    - git
+    - curl
+    - wget
+
+- name: set the clock
+  copy: src=../templates/clock dest=/etc/sysconfig/clock backup=yes
+
+- name: change UTC -> JST
+  shell: cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+
+- name: restart sysconfig/clock
+  shell: source /etc/sysconfig/clock
+

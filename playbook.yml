@@ -1,0 +1,16 @@
+- hosts: all
+  user: vagrant
+  sudo: yes
+  # vars:
+  #   db_name: laravel
+  #   db_user: laravel
+  #   db_password: laravel
+  tasks:
+    - include: tasks/common.yml
+    - include: tasks/repo.yml
+    - include: tasks/apache.yml
+    - include: tasks/php.yml
+    - include: tasks/memcached.yml
+    - include: tasks/composer.yml
+    - include: tasks/mysql.yml
+    - include: tasks/redis.yml
