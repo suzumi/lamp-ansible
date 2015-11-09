@@ -2,7 +2,7 @@
   yum: name=httpd state=latest
 
 - name: copy httpd.conf
-  copy: copy: src=../templates/httpd.conf dest=/etc/httpd/conf/httpd backup=yes
+  copy: src=../templates/httpd.conf dest=/etc/httpd/conf/httpd backup=yes
 
 - name: be sure apache is running and enabled
   service: name=httpd state=started enabled=yes

@@ -1,8 +1,8 @@
-## ansible-searchsuite
+## building LAMP enviroment with Ansible
 
 Vagrant + Ansible for PHP Server.
 
-## 内容
+## install
 - CentOS 6.5
 - Apache http server
 - PHP 5.5
@@ -11,11 +11,10 @@ Vagrant + Ansible for PHP Server.
 - Memcached
 - Redis
 
-### 1. [VirtualBox](https://www.virtualbox.org/) をインストール
-最新版を入れれば大丈夫。
-### 2. [Vagrant](http://www.vagrantup.com/) をインストール
-最新版を入れれば大丈夫。
-### 3. [Ansible](http://www.ansible.com/home) をインストール
+## requires
+### 1. [VirtualBox](https://www.virtualbox.org/) 
+### 2. [Vagrant](http://www.vagrantup.com/) 
+### 3. [Ansible](http://www.ansible.com/home) 
 [Ansible のインストール](http://docs.ansible.com/intro_installation.html) を参考にしてください。
 ### 4. git clone
 ```
@@ -23,6 +22,6 @@ $ git clone XXXXXXXXX
 ```
 ### 5. vagrant up
 ```
-$ cd ansible-searchsuite
+$ cd lamp-ansible
 $ vagrant up
 ```
