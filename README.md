@@ -2,7 +2,8 @@
 
 Vagrant + Ansible for PHP Server.
 
-## install
+### install lists
+
 - CentOS 6.5
 - Apache http server
 - PHP 5.5
@@ -11,14 +12,16 @@ Vagrant + Ansible for PHP Server.
 - Memcached
 - Redis
 
-## requires
-### 1. [VirtualBox](https://www.virtualbox.org/) 
-### 2. [Vagrant](http://www.vagrantup.com/) 
-### 3. [Ansible](http://www.ansible.com/home) 
-[Ansible のインストール](http://docs.ansible.com/intro_installation.html) を参考にしてください。
+### requires
+
+- [VirtualBox](https://www.virtualbox.org/) 
+- [Vagrant](http://www.vagrantup.com/) 
+- [Ansible](http://www.ansible.com/home) 
+(Please refer to [Installation](http://docs.ansible.com/intro_installation.html))
+
 ### 4. git clone
 ```
-$ git clone XXXXXXXXX
+$ git clone git@github.com:suzumi/lamp-ansible.git
 ```
 ### 5. vagrant up
 ```
